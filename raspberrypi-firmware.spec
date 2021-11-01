@@ -28,8 +28,8 @@ chip as shipped in the Raspberry Pi series of devices.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/boot
-cp -pr *.{bin,dat,elf,dtb} overlays $RPM_BUILD_ROOT/boot
+install -d $RPM_BUILD_ROOT/boot/firmware
+cp -pr *.{bin,dat,elf,dtb} overlays $RPM_BUILD_ROOT/boot/firmware
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -37,8 +37,9 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc LICENCE.broadcom COPYING.linux
-/boot/*.dtb
-/boot/fixup*.dat
-/boot/start*.elf
-/boot/bootcode.bin
-/boot/overlays
+%dir /boot/firmware
+/boot/firmware/*.dtb
+/boot/firmware/fixup*.dat
+/boot/firmware/start*.elf
+/boot/firmware/bootcode.bin
+/boot/firmware/overlays
