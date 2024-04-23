@@ -1,6 +1,6 @@
 Summary:	Firmware for the Broadcom bcm283x/bcm2711 used in the Raspberry Pi
 Name:		raspberrypi-firmware
-Version:	1.20240306
+Version:	1.20240423
 Release:	1
 Epoch:		1
 # see LICENSE.broadcom
@@ -8,7 +8,7 @@ Epoch:		1
 License:	Redistributable, no modification permitted
 Group:		Base/Kernel
 Source0:	https://github.com/raspberrypi/firmware/archive/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	77c7ad6f25c8b124a7bdd0f55b51f5a7
+# Source0-md5:	8bb4bb0282e9b061c8df064ad0740b30
 URL:		https://github.com/raspberrypi/firmware/
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
